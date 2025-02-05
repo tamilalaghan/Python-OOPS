@@ -1,6 +1,3 @@
-Execute One
-
-```py
 #Execute One
 class GitHub:
     def __init__(self,repo_name,request_type,message=None):
@@ -24,5 +21,3 @@ print(gitlab)
 print("******************************")
 terraform("Terraform","push","TF Files updated")
 print(terraform)
-```
-![alt text](image.png)
