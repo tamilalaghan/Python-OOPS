@@ -1,4 +1,4 @@
-# Execute Two
+# Execute Three
 class Cellphone:
     def __init__(self,brand,model,os,price_usd):
         self.brand = brand
@@ -10,7 +10,9 @@ class Cellphone:
         if name == "price_usd":
             return super().__getattribute__("price_usd") * 0.75
         return super().__getattribute__(name)
-
+    
+    def __getattr__(self,name):
+        return f"The Attribute: {name} is not defined"
     def __str__(self):
         return f"{self.brand}'s {self.model}, runs on {self.os} os and is priced at ${self.price_usd}"
     
@@ -21,6 +23,7 @@ apple = Cellphone("Apple","15 ProMax","ios",2100)
 print(nokia)
 print(samsung)
 print(apple)
+print(apple.someattr)
 
 
 
